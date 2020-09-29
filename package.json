@@ -45,7 +45,7 @@
   ],
   "devDependencies": {
     "@babel/plugin-proposal-optional-chaining": "^7.11.0",
-    "@digital-magic/ts-common-utils": "^1.0.8",
+    "@digital-magic/ts-common-utils": "^1.0.10",
     "@types/jest": "^26.0.13",
     "@types/node": "^11.15.24",
     "@types/prettier": "^2.1.1",
@@ -66,7 +66,7 @@
     "typescript": "^4.0.2"
   },
   "peerDependencies": {
-    "@digital-magic/ts-common-utils": ">= 1.0.8",
+    "@digital-magic/ts-common-utils": ">= 1.0.10",
     "axios": ">= 0.19.2",
     "fp-ts": ">= 2.6.2",
     "http-status-codes": ">= 1.4.0",
