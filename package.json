@@ -60,12 +60,12 @@
     "tslint-immutable": "^6.0.1",
     "typescript": "^4.0.2"
   },
-  "dependencies": {
-    "@digital-magic/ts-common-utils": "^1.0.8",
-    "axios": "^0.20.0",
-    "fp-ts": "^2.8.3",
-    "http-status-codes": "^2.1.4",
-    "io-ts": "^2.2.10"
+  "peerDependencies": {
+    "@digital-magic/ts-common-utils": ">= 1.0.8",
+    "axios": ">= 0.19.2",
+    "fp-ts": ">= 2.6.2",
+    "http-status-codes": ">= 1.4.0",
+    "io-ts": ">= 2.2.4"
   },
   "husky": {
     "hooks": {
