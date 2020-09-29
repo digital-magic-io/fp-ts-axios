@@ -1,7 +1,7 @@
 {
-  "name": "@digital-magic/ts-template",
+  "name": "@digital-magic/fp-ts-axios",
   "version": "1.0.1",
-  "description": "Template for Typescript based projects",
+  "description": "Axios client implementation build with Task abstraction from FP",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "sideEffects": false,
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/digital-magic-io/ts-template.git"
+    "url": "git+https://github.com/digital-magic-io/fp-ts-axios.git"
   },
   "files": [
     "lib/",
@@ -30,16 +30,18 @@
   "author": "Jevgeni Goloborodko <jevgeni@digital-magic.io>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/digital-magic-io/ts-template/issues"
+    "url": "https://github.com/digital-magic-io/fp-ts-axios/issues"
   },
-  "homepage": "https://github.com/digital-magic-io/ts-template#readme",
+  "homepage": "https://github.com/digital-magic-io/fp-ts-axios#readme",
   "keywords": [
     "typescript",
-    "template"
+    "fp-ts",
+    "axios"
   ],
   "tags": [
     "typescript",
-    "template"
+    "fp-ts",
+    "axios"
   ],
   "devDependencies": {
     "@babel/plugin-proposal-optional-chaining": "^7.11.0",
@@ -58,7 +60,13 @@
     "tslint-immutable": "^6.0.1",
     "typescript": "^4.0.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@digital-magic/ts-common-utils": "^1.0.8",
+    "axios": "^0.20.0",
+    "fp-ts": "^2.8.3",
+    "http-status-codes": "^2.1.4",
+    "io-ts": "^2.2.10"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
