@@ -1,6 +1,6 @@
 {
   "name": "@digital-magic/fp-ts-axios",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Axios client implementation build with Task abstraction from FP",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
