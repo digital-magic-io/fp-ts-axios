@@ -156,7 +156,7 @@ const doPostBinary = (axios: AxiosInstance, axiosErrorReader: AxiosErrorReader) 
   )
 }
 
-export const createAxiosClient = (axios: AxiosInstance, axiosErrorReader: AxiosErrorReader) => ({
+export const createAxiosClient = <T extends AxiosInstance>(axios: T, axiosErrorReader: AxiosErrorReader) => ({
   setupSessionIdHeader: setupSessionIdHeader(axios),
   get: doGet(axios, axiosErrorReader),
   post: doPost(axios, axiosErrorReader),
