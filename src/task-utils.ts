@@ -8,7 +8,7 @@ export const completeHandler = <Left, Right>(
   success: (s: Right) => void,
   failure: (f: Left) => void
 ): ((task: TE.TaskEither<Left, Right>) => void) => (task) => {
-  task().then((r) => pipe(r, E.fold(failure, success)))
+  void task().then((r) => pipe(r, E.fold(failure, success)))
 }
 
 export const onComplete = <Left, Right>(

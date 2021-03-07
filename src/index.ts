@@ -19,7 +19,9 @@ const setupSessionIdHeader = (axios: AxiosInstance) => <T extends string>(sessio
   pipe(
     sessionId,
     O.fold<T, void>(
+      // eslint-disable-next-line functional/immutable-data,@typescript-eslint/no-unsafe-member-access
       () => delete axios.defaults.headers[Header.XSessionId],
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,functional/immutable-data
       (sessionId) => (axios.defaults.headers[Header.XSessionId] = sessionId)
     )
   )
@@ -48,7 +50,7 @@ function decodeResponse<T, I, A extends t.Decoder<I, T>>(
     E.mapLeft(() => internalError(`Parsing error on request: ${reqStr()} for entity: ${decoder.name}`)),
     // TODO: This is side effect and must be handled appropriately
     E.mapLeft((e) => {
-      // tslint:disable-next-line:no-console
+      // eslint-disable-next-line no-console
       console.error(e.message, body, PathReporter.report(validationResult))
       return e
     }),
@@ -127,6 +129,7 @@ export const binaryData = (contentType: string, data: unknown): CustomBodyConten
   data
 })
 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 export const formData = (data: FormData): CustomBodyContent => ({ type: 'FORM-DATA', data })
 
 function getBodyContentParts(body: CustomBodyContent): readonly [string, unknown] {
@@ -156,6 +159,7 @@ const doPostBinary = (axios: AxiosInstance, axiosErrorReader: AxiosErrorReader) 
   )
 }
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const createAxiosClient = <T extends AxiosInstance>(axios: T, axiosErrorReader: AxiosErrorReader) => ({
   setupSessionIdHeader: setupSessionIdHeader(axios),
   get: doGet(axios, axiosErrorReader),
